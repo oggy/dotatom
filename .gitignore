@@ -1,5 +1,8 @@
-storage
-compile-cache
-dev
-.npm
-.node-gyp
+/.apm/*
+/.node-gyp
+/.npm
+/compile-cache
+/dev
+/packages/*
+/scratch
+/storage
