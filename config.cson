@@ -1,5 +1,28 @@
 "*":
   "exception-reporting":
-    userId: "38452432-48f7-ee17-abf4-dc58ed1e5382"
+    userId: "7afb8595-45db-0ada-58e4-8cf4614cbd6f"
   welcome:
     showOnStartup: false
+  editor:
+    fontSize: 12
+    invisibles: {}
+    showIndentGuide: true
+    autoIndentOnPaste: false
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+  core:
+    audioBeep: false
+    destroyEmptyPanes: false
+    excludeVcsIgnoredPaths: false
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  "custom-title":
+    template: "<%= projectPath.match(/[^\\/]*$/)[0].split(/\\W+/).filter(function(s) { return s }).map(function(s) { return s.char})join(' ') %>"
+  "git-plus": {}
+  "advanced-new-file":
+    suggestCurrentFilePath: true
+  "autocomplete-plus":
+    enableAutoActivation: false
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true

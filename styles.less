@@ -1,25 +1,48 @@
-/*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed.
- *
- * If you are unfamiliar with LESS, you can read more about it here:
- * http://www.lesscss.org
- */
-
-.tree-view {
-
+.tab-bar {
+  display: none;
 }
 
-// style the background and foreground colors on the atom-text-editor-element
-// itself
 atom-text-editor {
+  background-color: black;
+  color: white;
 
-}
+  &::shadow {
+    .entity.name { text-decoration: none; }
+    .entity.inherited-class { color: inherit; }
 
-// To style other content in the text editor's shadow DOM, use the ::shadow
-// expression
-atom-text-editor::shadow .cursor {
+    .function { color: orange !important; }
+    .variable { color: #fbf !important}
+    .constant, .symbol { color: #dd9 !important; }
+    .entity.class, .support.class, .entity.module, .constant.variable { color: paleturquoise !important; }
+    .keyword, .storage, .self { color: lightsalmon !important; }
+    .preprocessor, .preprocessor .keyword { color: tan !important; }
+    .string { color: lightgreen !important; }
+    .comment { color: lightslateblue !important; }
+    .special-method, .property-name, .ruby.kernel { color: #ffa !important; }
+    .cursor-line { background-color: #024 !important; }
 
+    .gutter {
+      background-color: black;
+
+      .line-number:not(.cursor-line) {
+        opacity: 0.5;
+      }
+    }
+
+    .cursor {
+      border-left: solid 1px yellow;
+    }
+
+    .highlight .region {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .highlight.current-result .region {
+      background-color: red;
+    }
+
+    .highlight.find-result .region {
+      background-color: rgba(255, 255, 127, 0.6);
+    }
+  }
 }
