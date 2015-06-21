@@ -2,8 +2,12 @@ Path = require 'path'
 
 endBlock = (event) ->
   editor = atom.workspace.getActiveTextEditor()
+  editor.moveToEndOfLine()
+  editor.insertNewline()
   editor.insertText("end")
   editor.autoIndentSelectedRows()
+
+atom.commands.add 'atom-text-editor', 'g:end-block', (event) -> endBlock(event)
 
 # Override atom.workspace.updateWindowTitle to hack in our titles.
 capitalize = (string) ->

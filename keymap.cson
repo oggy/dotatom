@@ -8,5 +8,6 @@
   "ctrl-'": 'core:redo'
   'alt-g': 'go-to-line:toggle'
 
-'atom-text-editor:not([mini])':
+'atom-workspace atom-text-editor:not([mini])':
   'tab': 'editor:auto-indent'
+  'alt-enter': 'g:end-block'
