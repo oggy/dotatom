@@ -26,3 +26,9 @@
     enableAutoActivation: false
   "find-and-replace":
     openProjectFindResultsInRightPane: true
+".erb.html.text":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+".ruby.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
