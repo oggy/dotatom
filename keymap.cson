@@ -3,6 +3,7 @@
   'cmd-n': 'advanced-new-file:toggle'
   'ctrl-x s': 'window:save-all'
   'ctrl-shift-T': 'atomic-emacs:transpose-lines'
+  'cmd-q cmd-q cmd-q': 'application:quit'
 
 'atom-text-editor':
   "ctrl-'": 'core:redo'
