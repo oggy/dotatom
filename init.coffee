@@ -7,7 +7,13 @@ endBlock = (event) ->
   editor.insertText("end")
   editor.autoIndentSelectedRows()
 
+toggleDevMode = ->
+  devMode = not atom.inDevMode()
+  atom.close()
+  atom.open(pathsToOpen: atom.project.getPaths(), newWindow: true, devMode: devMode)
+
 atom.commands.add 'atom-text-editor', 'g:end-block', (event) -> endBlock(event)
+atom.commands.add 'atom-text-editor', 'g:toggle-dev-mode', (event) -> toggleDevMode(event)
 
 # Override atom.workspace.updateWindowTitle to hack in our titles.
 capitalize = (string) ->
