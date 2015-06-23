@@ -17,6 +17,7 @@
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
+    projectHome: "/Users/g/src"
   "custom-title":
     template: "<%= projectPath.match(/[^\\/]*$/)[0].split(/\\W+/).filter(function(s) { return s }).map(function(s) { return s.char})join(' ') %>"
   "git-plus": {}
