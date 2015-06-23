@@ -4,11 +4,13 @@
   welcome:
     showOnStartup: false
   editor:
-    fontSize: 12
     invisibles: {}
     showIndentGuide: true
     autoIndentOnPaste: false
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+    lineHeight: 1.3
+    fontSize: 12
+    fontFamily: "Monaco"
   core:
     audioBeep: false
     destroyEmptyPanes: false
