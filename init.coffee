@@ -12,6 +12,17 @@ endBlock = (event) ->
     editor.insertText("end")
     editor.autoIndentSelectedRows()
 
+transposeLines = (event) ->
+  editor = event.target.getModel()
+  editor.transact ->
+    for cursor in editor.getCursors()
+      {row, column} = cursor.getBufferPosition()
+      if cursor.getBufferRow() < editor.getLineCount() - 1
+        text = editor.getTextInBufferRange([[row, 0], [row + 1, 0]])
+        editor.deleteLine(row)
+        editor.setTextInBufferRange([[row + 1, 0], [row + 1, 0]], text)
+        cursor.setBufferPosition([row + 1, column])
+
 toggleDevMode = ->
   devMode = not atom.inDevMode()
   atom.close()
@@ -19,6 +30,7 @@ toggleDevMode = ->
 
 atom.commands.add 'atom-text-editor', 'g:end-block', (event) -> endBlock(event)
 atom.commands.add 'atom-text-editor', 'g:toggle-dev-mode', (event) -> toggleDevMode(event)
+atom.commands.add 'atom-text-editor', 'g:transpose-lines', (event) -> transposeLines(event)
 
 # Override atom.workspace.updateWindowTitle to hack in our titles.
 capitalize = (string) ->

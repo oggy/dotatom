@@ -2,12 +2,12 @@
   'alt-cmd-r': 'window:reload'
   'cmd-n': 'advanced-new-file:toggle'
   'ctrl-x s': 'window:save-all'
-  'ctrl-shift-T': 'atomic-emacs:transpose-lines'
   'cmd-q cmd-q cmd-q': 'application:quit'
 
 'atom-text-editor':
   "ctrl-'": 'core:redo'
   'alt-g': 'go-to-line:toggle'
+  'ctrl-shift-T': 'g:transpose-lines'
 
 'atom-workspace atom-text-editor:not([mini])':
   'tab': 'editor:auto-indent'
