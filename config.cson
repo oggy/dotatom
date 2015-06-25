@@ -29,6 +29,9 @@
     enableAutoActivation: false
   "find-and-replace":
     openProjectFindResultsInRightPane: true
+  rspec:
+    save_before_run: true
+    command: "$( if [ -e bin/rspec ]; then echo -n bin/rspec; elif [ -e Gemfile ]; then echo -n bundle exec rspec; else echo -n rspec; fi )"
 ".erb.html.text":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
