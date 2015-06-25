@@ -2,10 +2,15 @@ Path = require 'path'
 
 endBlock = (event) ->
   editor = atom.workspace.getActiveTextEditor()
-  editor.moveToEndOfLine()
-  editor.insertNewline()
-  editor.insertText("end")
-  editor.autoIndentSelectedRows()
+  editor.transact ->
+    editor.moveCursors (cursor) =>
+      cursor.moveToEndOfLine()
+      thisLineText = editor.lineTextForBufferRow(cursor.getBufferRow())
+      unless /^\s*$/.test(thisLineText)
+        pos = cursor.getBufferPosition()
+        editor.setTextInBufferRange([pos, pos], '\n')
+    editor.insertText("end")
+    editor.autoIndentSelectedRows()
 
 toggleDevMode = ->
   devMode = not atom.inDevMode()
