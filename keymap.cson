@@ -8,6 +8,11 @@
   "ctrl-'": 'core:redo'
   'alt-g': 'go-to-line:toggle'
   'ctrl-shift-T': 'g:transpose-lines'
+  'ctrl-x j l': 'bookmarks:view-all'
+  'ctrl-x j x': 'bookmarks:clear-bookmarks'
+  'ctrl-x j j': 'bookmarks:toggle-bookmark'
+  'ctrl-x j n': 'bookmarks:jump-to-next-bookmark'
+  'ctrl-x j p': 'bookmarks:jump-to-previous-bookmark'
 
 'atom-workspace atom-text-editor:not([mini])':
   'tab': 'editor:auto-indent'
