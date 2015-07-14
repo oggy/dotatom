@@ -106,3 +106,17 @@ atom-text-editor {
   .tty-36 { color: #4ff !important; }
   .tty-37 { color: #fff !important; }
 }
+
+status-bar {
+  .file-info.buffer-modified {
+    color: red;
+
+    a {
+      color: red;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
