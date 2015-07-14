@@ -13,14 +13,12 @@
     fontSize: 12
     fontFamily: "Monaco"
   core:
-    audioBeep: false
-    destroyEmptyPanes: false
-    excludeVcsIgnoredPaths: false
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
     projectHome: "/Users/g/src"
+    excludeVcsIgnoredPaths: false
   "custom-title":
     template: "<%= projectPath.match(/[^\\/]*$/)[0].split(/\\W+/).filter(function(s) { return s }).map(function(s) { return s.char})join(' ') %>"
   "git-plus": {}
