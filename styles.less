@@ -47,8 +47,16 @@ atom-text-editor {
       border-left: solid 1px yellow;
     }
 
-    .highlight .region {
-      background-color: rgba(255, 255, 255, 0.4);
+    .highlight {
+      .region {
+        background-color: rgba(255, 255, 255, 0.4);
+        z-index: -99999;
+      }
+
+      .bracket-matcher {
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 1;
+      }
     }
 
     .highlight.current-result .region {
