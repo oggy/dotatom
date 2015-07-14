@@ -2,6 +2,11 @@
   display: none;
 }
 
+.tree-view {
+  li { color: white !important; }
+  li.status-ignored, li.status-ignored > .list-item { color: #999 !important; }
+}
+
 atom-text-editor {
   background-color: black;
   color: white;
@@ -61,6 +66,18 @@ atom-text-editor {
     .wrap-guide {
       background-color: rgba(127, 192, 255, 0.3);
     }
+  }
+}
+
+.select-list {
+  .primary-line {
+    color: white !important;
+    display: inline !important;
+  }
+
+  .secondary-line {
+    color: #ccc !important;
+    display: inline !important;
   }
 }
 
