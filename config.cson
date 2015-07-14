@@ -8,10 +8,10 @@
     showIndentGuide: true
     autoIndentOnPaste: false
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
-    lineHeight: 1.3
+    lineHeight: 1.4
+    softWrap: true
     fontSize: 12
     fontFamily: "Monaco"
-    softWrap: true
   core:
     audioBeep: false
     destroyEmptyPanes: false
