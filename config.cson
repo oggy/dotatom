@@ -31,6 +31,14 @@
   rspec:
     save_before_run: true
     command: "$( if [ -e bin/rspec ]; then echo -n bin/rspec; elif [ -e Gemfile ]; then echo -n bundle exec rspec; else echo -n rspec; fi )"
+  "fuzzy-finder":
+    preserveLastSearch: true
+    searchAllPanes: true
+    ignoredNames: [
+      "*.class"
+      "*.o"
+      "*.pyc"
+    ]
 ".erb.html.text":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
