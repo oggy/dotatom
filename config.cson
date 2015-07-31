@@ -39,6 +39,9 @@
       "*.o"
       "*.pyc"
     ]
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
 ".erb.html.text":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
