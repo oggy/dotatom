@@ -10,8 +10,8 @@
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
     lineHeight: 1.4
     softWrap: true
-    fontSize: 12
     fontFamily: "Monaco"
+    fontSize: 12
   core:
     themes: [
       "atom-dark-ui"
@@ -63,9 +63,40 @@
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
+  "linter-rubocop":
+    command: "/Users/g/.rbenv/shims/rubocop"
+  linter:
+    showErrorTabFile: false
+    showErrorTabProject: false
+    underlineIssues: false
+    showErrorInline: false
+    errorPanelHeight: 50
+  "tab-switcher":
+    fadeInDelay: 0
+    global: true
+  "atom-beautify":
+    _analyticsUserId: "67dfc99d-cead-4c01-83a7-51ebc6c64343"
+  "activate-power-mode":
+    particles:
+      size: {}
+      spawnCount: {}
+      totalCount: {}
+    screenShake: {}
 ".erb.html.text":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+".html.jsp.text":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
 ".ruby.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+".java.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+".java-properties.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
+".junit-test-report.text":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
