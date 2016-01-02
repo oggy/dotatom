@@ -19,5 +19,9 @@
   'alt->': 'core:move-to-bottom'
 
 'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-i': 'snippets:expand'
   'tab': 'editor:auto-indent'
   'alt-enter': 'g:end-block'
+
+'atom-text-editor:not([mini])':
+  'ctrl-i': 'snippets:next-tab-stop'
