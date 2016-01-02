@@ -74,7 +74,7 @@ g = {}
 g.__defineGetter__ 'ed', -> atom.workspace.getActiveTextEditor()
 g.__defineGetter__ 'pane', -> atom.workspace.getActivePane()
 g.__defineGetter__ 'item', -> atom.workspace.getActivePaneItem()
-g.__defineGetter__ 'c', -> @ed.getCursor()
+g.__defineGetter__ 'c', -> @ed.getCursors()[0]
 g.__defineGetter__ 'cs', -> @ed.getCursors()
 
 window.g = g
