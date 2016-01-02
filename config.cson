@@ -19,6 +19,27 @@
     ]
     projectHome: "/Users/g/src"
     excludeVcsIgnoredPaths: false
+    destroyEmptyPanes: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "Thumbs.db"
+      "*.aux"
+      "*.class"
+      "*.gif"
+      "*.gz"
+      "*.jpg"
+      "*.jpeg"
+      "*.log"
+      "*.pdf"
+      "*.png"
+      "*.pyo"
+      "*.rds"
+      "*.scssc"
+      "._*"
+    ]
   "custom-title":
     template: "<%= projectPath.match(/[^\\/]*$/)[0].split(/\\W+/).filter(function(s) { return s }).map(function(s) { return s.char})join(' ') %>"
   "git-plus": {}
