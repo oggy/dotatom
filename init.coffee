@@ -28,8 +28,8 @@ toggleDevMode = ->
   atom.close()
   atom.open(pathsToOpen: atom.project.getPaths(), newWindow: true, devMode: devMode)
 
+atom.commands.add 'atom-workspace', 'g:toggle-dev-mode', (event) -> toggleDevMode(event)
 atom.commands.add 'atom-text-editor', 'g:end-block', (event) -> endBlock(event)
-atom.commands.add 'atom-text-editor', 'g:toggle-dev-mode', (event) -> toggleDevMode(event)
 atom.commands.add 'atom-text-editor', 'g:transpose-lines', (event) -> transposeLines(event)
 
 # Override atom.workspace.updateWindowTitle to hack in our titles.
