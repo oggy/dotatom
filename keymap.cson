@@ -14,6 +14,10 @@
   'ctrl-x j n': 'bookmarks:jump-to-next-bookmark'
   'ctrl-x j p': 'bookmarks:jump-to-previous-bookmark'
 
+# linter clobbers these atomic-emacs bindings.
+'atom-workspace atom-text-editor.mini, atom-workspace atom-text-editor:not(.mini)':
+  'alt->': 'core:move-to-bottom'
+
 'atom-workspace atom-text-editor:not([mini])':
   'tab': 'editor:auto-indent'
   'alt-enter': 'g:end-block'
