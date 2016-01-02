@@ -1,6 +1,6 @@
 'atom-workspace':
   'alt-cmd-r': 'window:reload'
-  'cmd-n': 'advanced-new-file:toggle'
+  'cmd-n': 'advanced-open-file:toggle'
   'ctrl-x s': 'window:save-all'
   'cmd-q cmd-q cmd-q': 'application:quit'
 
