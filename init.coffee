@@ -47,29 +47,6 @@ buildTitle = (paths) ->
     Path.basename(path).match(/[a-z0-9\.]+/ig).map(capitalize).join(' ')
   document.title = names.join(', ')
 
-atom.workspace.updateWindowTitle = ->
-  appName = 'Atom'
-  projectPaths = atom.project?.getPaths() ? []
-  if item = @getActivePaneItem()
-    itemPath = item.getPath?()
-    itemTitle = item.getTitle?()
-    projectPath = find projectPaths, (projectPath) ->
-      itemPath is projectPath or itemPath?.startsWith(projectPath + Path.sep)
-  itemTitle ?= "untitled"
-  projectPath ?= projectPaths[0]
-
-  # console.log(projectPaths, buildTitle)
-  # debugger
-  document.title = buildTitle(projectPaths)
-  if item? and projectPath?
-    atom.setRepresentedFilename(itemPath ? projectPath)
-  else if projectPath?
-    atom.setRepresentedFilename(projectPath)
-  else
-    atom.setRepresentedFilename("")
-
-atom.workspace.updateWindowTitle()
-
 g = {}
 g.__defineGetter__ 'ed', -> atom.workspace.getActiveTextEditor()
 g.__defineGetter__ 'pane', -> atom.workspace.getActivePane()
@@ -77,4 +54,11 @@ g.__defineGetter__ 'item', -> atom.workspace.getActivePaneItem()
 g.__defineGetter__ 'c', -> @ed.getCursors()[0]
 g.__defineGetter__ 'cs', -> @ed.getCursors()
 
+g.windowTitle = ->
+  paths = atom.project?.getPaths() ? []
+  names = paths.map (path) ->
+    Path.basename(path).match(/[a-z0-9\.]+/ig).map(capitalize).join(' ')
+  names.join(', ')
+
 window.g = g
+atom.workspace.updateWindowTitle()
