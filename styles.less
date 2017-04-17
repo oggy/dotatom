@@ -15,20 +15,20 @@ atom-text-editor {
   background-color: black;
   color: white;
 
-  &::shadow {
-    .entity.name { text-decoration: none; }
-    .entity.inherited-class { color: inherit; }
+  & {
+    .syntax--entity.syntax--name { text-decoration: none; }
+    .syntax--entity.syntax--inherited-class { color: inherit; }
 
-    .entity.name.function { color: orange !important; }
-    .variable { color: #fbf !important}
-    .constant, .symbol { color: #dd9 !important; }
-    .entity.class, .support.class, .support.type, .entity.module, .entity.type, .constant.variable { color: paleturquoise !important; }
-    .keyword, .storage, .self { color: lightsalmon !important; }
-    .preprocessor, .preprocessor .keyword { color: tan !important; }
-    .string { color: lightgreen !important; }
-    .comment { color: #8470ff !important; }
-    .entity.object, .support.function, .special-method, .property-name, .ruby.kernel { color: #ffa !important; }
-    .cursor-line { background-color: #024 !important; }
+    .syntax--entity.syntax--name.syntax--function { color: orange !important; }
+    .syntax--variable { color: #fbf !important}
+    .syntax--constant, .syntax--symbol { color: #dd9 !important; }
+    .syntax--entity.syntax--class, .syntax--support.syntax--class, .syntax--support.syntax--type, .syntax--entity.syntax--module, .syntax--entity.syntax--type, .syntax--constant.syntax--variable { color: paleturquoise !important; }
+    .syntax--keyword, .syntax--storage, .syntax--self { color: lightsalmon !important; }
+    .syntax--preprocessor, .syntax--preprocessor .syntax--keyword { color: tan !important; }
+    .syntax--string { color: lightgreen !important; }
+    .syntax--comment { color: #8470ff !important; }
+    .syntax--entity.syntax--object, .syntax--support.syntax--function, .syntax--special-method, .syntax--property-name, .syntax--ruby.syntax--kernel { color: #ffa !important; }
+    .cursor-line { background-color: #024; z-index: -99999999; border-width: -4px; }
 
     .gfm {
       &.source { color: white !important; }
