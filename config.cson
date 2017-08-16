@@ -1,20 +1,25 @@
 "*":
+  Ensime:
+    logLevel: "warn"
+    sbtExec: "/Users/g/brew/bin/sbt"
   "advanced-new-file":
     suggestCurrentFilePath: true
   "atom-beautify":
     _analyticsUserId: "67dfc99d-cead-4c01-83a7-51ebc6c64343"
+    general:
+      _analyticsUserId: "837a9990-c007-4d16-8635-d226909adac9"
   "atom-ctags":
     buildTimeout: 100000
   "atomic-emacs":
     alwaysUseKillRing: true
+    useAdvancedOpenFile: false
+    yankFromClipboard: true
   "autocomplete-plus":
     enableAutoActivation: false
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
   core:
-    audioBeep: false
-    automaticallyUpdate: false
     disabledPackages: [
       "symbols-view"
     ]
@@ -39,16 +44,17 @@
       "._*"
     ]
     projectHome: "/Users/g/src"
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
+    titleBar: "custom"
   "custom-title":
     template: "<%= window.g.windowTitle() %>"
   editor:
     autoIndentOnPaste: false
     fontFamily: "Monaco"
-    fontSize: 13
     invisibles: {}
     lineHeight: 1.4
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_"
@@ -59,7 +65,7 @@
   "file-types":
     "^Dockerfile\\..*$": "source.dockerfile"
   "find-and-replace":
-    openProjectFindResultsInRightPane: true
+    projectSearchResultsPaneSplitDirection: "right"
   "fuzzy-finder":
     ignoredNames: [
       "*.class"
@@ -69,21 +75,24 @@
     preserveLastSearch: true
     searchAllPanes: true
   "git-plus": {}
+  hyperclick:
+    darwinTriggerKeys: "altKey"
+  "incremental-search":
+    instantSearch: true
   linter:
-    errorPanelHeight: 45
-    showErrorInline: false
-    showErrorTabFile: false
-    showErrorTabProject: false
-    underlineIssues: false
+    lintOnChangeInterval: 1000
+    lintOnOpen: false
+    lintPreviewTabs: false
   "linter-rubocop":
     command: "/Users/g/.rbenv/shims/rubocop"
+  "linter-ui-default":
+    panelHeight: 81
   rspec:
     command: "$( if [ -e bin/rspec ]; then echo -n bin/rspec; elif [ -e Gemfile ]; then echo -n bundle exec rspec; else echo -n rspec; fi )"
     save_before_run: true
   "tab-switcher":
     fadeInDelay: 0
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
 ".dockerfile.source":
