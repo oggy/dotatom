@@ -13,7 +13,7 @@ endBlock = (event) ->
     editor.autoIndentSelectedRows()
 
 transposeLines = (event) ->
-  editor = event.target.getModel()
+  editor = event.target?.closest('atom-text-editor').getModel()
   editor.transact ->
     for cursor in editor.getCursors()
       {row, column} = cursor.getBufferPosition()
