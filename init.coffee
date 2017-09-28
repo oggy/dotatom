@@ -1,5 +1,19 @@
 Path = require 'path'
 
+# Custom window title
+
+capitalize = (string) -> string.charAt(0).toUpperCase() + string.slice(1)
+atom.workspace.onDidChangeWindowTitle ->
+  paths = atom.project?.getPaths() ? []
+  names = paths.map (path) ->
+    Path.basename(path).match(/[a-z0-9\.]+/ig).map(capitalize).join(' ')
+  title = names.join(', ')
+  document.title = title
+  document.querySelector('.title-bar .title').innerText = title
+atom.workspace.updateWindowTitle()
+
+# Custom commands
+
 endBlock = (event) ->
   editor = atom.workspace.getActiveTextEditor()
   editor.transact ->
@@ -32,33 +46,9 @@ atom.commands.add 'atom-workspace', 'g:toggle-dev-mode', (event) -> toggleDevMod
 atom.commands.add 'atom-text-editor', 'g:end-block', (event) -> endBlock(event)
 atom.commands.add 'atom-text-editor', 'g:transpose-lines', (event) -> transposeLines(event)
 
-# Override atom.workspace.updateWindowTitle to hack in our titles.
-capitalize = (string) ->
-  string.charAt(0).toUpperCase() + string.slice(1)
-
-find = (obj, predicate) ->
-  for value in obj
-    if predicate.call(value)
-      return value
-  return null
-
-buildTitle = (paths) ->
-  names = paths.map (path) ->
-    Path.basename(path).match(/[a-z0-9\.]+/ig).map(capitalize).join(' ')
-  document.title = names.join(', ')
-
-g = {}
 g.__defineGetter__ 'ed', -> atom.workspace.getActiveTextEditor()
 g.__defineGetter__ 'pane', -> atom.workspace.getActivePane()
 g.__defineGetter__ 'item', -> atom.workspace.getActivePaneItem()
 g.__defineGetter__ 'c', -> @ed.getCursors()[0]
 g.__defineGetter__ 'cs', -> @ed.getCursors()
-
-g.windowTitle = ->
-  paths = atom.project?.getPaths() ? []
-  names = paths.map (path) ->
-    Path.basename(path).match(/[a-z0-9\.]+/ig).map(capitalize).join(' ')
-  names.join(', ')
-
 window.g = g
-atom.workspace.updateWindowTitle()
