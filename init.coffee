@@ -46,6 +46,7 @@ atom.commands.add 'atom-workspace', 'g:toggle-dev-mode', (event) -> toggleDevMod
 atom.commands.add 'atom-text-editor', 'g:end-block', (event) -> endBlock(event)
 atom.commands.add 'atom-text-editor', 'g:transpose-lines', (event) -> transposeLines(event)
 
+g = {}
 g.__defineGetter__ 'ed', -> atom.workspace.getActiveTextEditor()
 g.__defineGetter__ 'pane', -> atom.workspace.getActivePane()
 g.__defineGetter__ 'item', -> atom.workspace.getActivePaneItem()
